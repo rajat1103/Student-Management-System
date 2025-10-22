@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <div class="input-section">
+            <input type="text" id="nameInput" placeholder="Name" aria-label="Student Name" >
+            <input type="number" id="ageInput" placeholder="Age" aria-label="Student Age">
+            <input type="text" id="courseInput" placeholder="Course" aria-label="Student Course">
+            <button id="addStudentBtn" class="btn primary-btn">Add Student</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Student</h2>
+            <input type="hidden" id="editStudentId">
+            <input type="text" id="editName" placeholder="Name">
+            <input type="number" id="editAge" placeholder="Age">
+            <input type="text" id="editCourse" placeholder="Course">
+            <button id="updateStudentBtn" class="btn primary-btn">Update Student</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
