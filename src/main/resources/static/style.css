@@ -1,0 +1,186 @@
+/* style.css */
+
+/* --- General Styling and Layout --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* Max width to resemble the screenshot */
+}
+
+h1 {
+    color: #8a2be2; /* Purple color for the title, matching the text */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* --- Input Section Styling --- */
+.input-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f8ff; /* Very light subtle background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-section input[type="text"],
+.input-section input[type="number"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* --- Button Styling --- */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.primary-btn {
+    background-color: #8a2be2; /* Bright Purple */
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #7b24c2;
+}
+
+/* --- Table Styling (Main List) --- */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: #f0f4ff; /* Very light lilac for header */
+    color: #333;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Column specific styles to match alignment in the screenshot */
+td:nth-child(1), /* ID */
+td:nth-child(3) { /* AGE */
+    text-align: center;
+    width: 50px;
+}
+
+/* --- Action Button Styling (Edit/Delete) --- */
+.edit-btn {
+    background-color: #9370db; /* Medium Purple for Edit */
+    color: white;
+    margin-right: 8px;
+    padding: 8px 12px;
+}
+
+.edit-btn:hover {
+    background-color: #7f51b0;
+}
+
+.delete-btn {
+    background-color: #e3342f; /* Red for Delete */
+    color: white;
+    padding: 8px 12px;
+}
+
+.delete-btn:hover {
+    background-color: #cc1f1f;
+}
+
+/* --- Modal Styling --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal h2 {
+    color: #8a2be2;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.modal-content .primary-btn {
+    width: 100%;
+    margin-top: 10px;
+}
