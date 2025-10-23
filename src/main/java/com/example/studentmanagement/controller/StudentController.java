@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
+@CrossOrigin(origins = "*") // ADDED: Enables CORS for all origins (*)
 public class StudentController {
 
     private final StudentService service;
