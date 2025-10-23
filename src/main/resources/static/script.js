@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const editAge = document.getElementById('editAge');
     const editCourse = document.getElementById('editCourse');
     const updateStudentBtn = document.getElementById('updateStudentBtn');
-    const API_BASE_URL = 'http://localhost:8080/api/students';
+    const API_BASE_URL = '/api/students';
 
     //--- Utility Functions
     // Show modal
